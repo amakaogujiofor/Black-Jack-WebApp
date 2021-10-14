@@ -1,0 +1,57 @@
+body {
+  background: radial-gradient(
+    circle at -8.9% 51.2%,
+    rgb(0, 255, 85) 0%,
+    rgb(255, 124, 0) 15.9%,
+    rgb(255, 163, 77) 15.9%,
+    rgb(237, 255, 77) 24.4%,
+    rgb(19, 30, 37) 24.5%,
+    #131e25 66%
+  );
+  font-family: Arial, Helvetica, sans-serif;
+  background-size: auto;
+  text-align: center;
+  font-weight: bold;
+  color: azure;
+}
+h1 {
+  margin-top: 80px;
+  color: #feffdf;
+  font-size: 50px;
+}
+
+#message-el {
+  font-style: italic;
+}
+
+button {
+  color: #feffdf;
+  width: 150px;
+  padding: 15px 0px;
+  background: #fc8a15;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  margin: 0px 10px;
+}
+
+button:hover {
+  color: purple;
+  background: #feffdf;
+}
+
+.new-el {
+  color: rgb(26, 6, 6);
+  width: 150px;
+  padding: 15px 0px;
+  background: #1ee494;
+  border: none;
+  border-radius: 15px;
+  font-weight: bold;
+  margin: 0px 10px;
+}
+
+.new-el:hover {
+  color: #b9e6d3;
+  background: #beb000;
+}
