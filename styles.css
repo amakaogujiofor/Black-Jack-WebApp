@@ -70,3 +70,12 @@ button:hover {
   width: 250px;
   border-radius: 15px;
 }
+
+@media screen and (min-width: 480px) {
+  .card-image {
+    width: 150px;
+  }
+  .clear-el {
+    margin-top: 5px;
+  }
+}
