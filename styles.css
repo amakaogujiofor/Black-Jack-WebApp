@@ -71,11 +71,15 @@ button:hover {
   border-radius: 15px;
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 300px) {
   .card-image {
-    width: 150px;
+    width: 170px;
+    margin-left: 15px;
   }
   .clear-el {
-    margin-top: 5px;
+    margin-top: 15px;
+  }
+  .new-el {
+    margin-top: 15px;
   }
 }
