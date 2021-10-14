@@ -6,6 +6,15 @@ let messageEl = document.getElementById("message-el");
 let numbers = []; //ordered list of items
 let clearEl = document.getElementById("clear");
 
+let player = {
+  name: "Guest",
+  chips: 2000,
+  currency: "\u20A6",
+};
+
+let playerEl = document.querySelector("#player-el");
+playerEl.textContent = player.name + ": " + player.currency + player.chips;
+
 // let sumEl = document.getElementById("sum-el");
 let sumEl = document.querySelector("#sum-el");
 cardsEl = document.querySelector("#cards-el");
@@ -55,17 +64,21 @@ function renderGame() {
 
 // New Card Setup:
 function newGame() {
-  console.log("Drawing a new card from the deck!");
-  let card = getRandomCard();
-  sum += card;
-  numbers.push(card);
-  console.log(numbers);
-  renderGame();
+  //cCondition to start New Game:
+  if (isAlive === true && hasBlackJack === false) {
+    let card = getRandomCard();
+    sum += card;
+    numbers.push(card);
+    console.log(numbers);
+    renderGame();
+  }
 }
 
 function clearGame() {
-  clearEl.innerText = "Ready to Play again?";
-  cardsEl.textContent = "Cards: ";
-  sumEl.innerText = "Sum:";
-  messageEl.innerText = "You can do better next time!!";
+  if (isAlive === false) {
+    // clearEl.innerText = "Ready to Play again?";
+    cardsEl.textContent = "Cards: ";
+    sumEl.innerText = "Sum:";
+    messageEl.innerText = "Ready to Play Again?";
+  }
 }
