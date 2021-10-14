@@ -5,6 +5,9 @@ let message = "";
 let messageEl = document.getElementById("message-el");
 let numbers = []; //ordered list of items
 let clearEl = document.getElementById("clear");
+let playerEl = document.querySelector("#player-el");
+let sumEl = document.querySelector("#sum-el");
+cardsEl = document.querySelector("#cards-el");
 
 let player = {
   name: "Guest",
@@ -12,12 +15,9 @@ let player = {
   currency: "\u20A6",
 };
 
-let playerEl = document.querySelector("#player-el");
 playerEl.textContent = player.name + ": " + player.currency + player.chips;
 
 // let sumEl = document.getElementById("sum-el");
-let sumEl = document.querySelector("#sum-el");
-cardsEl = document.querySelector("#cards-el");
 
 //Get random cards
 function getRandomCard() {
@@ -75,7 +75,7 @@ function newGame() {
 }
 
 function clearGame() {
-  if (isAlive === false) {
+  if (isAlive === false || hasBlackJack === true) {
     // clearEl.innerText = "Ready to Play again?";
     cardsEl.textContent = "Cards: ";
     sumEl.innerText = "Sum:";
